@@ -35,7 +35,6 @@ def logIn(request):
         else:
             messages.error(request, 'Invalid email or password.')
             return redirect('login')
-    
     return render(request, 'login.html')
 
 
