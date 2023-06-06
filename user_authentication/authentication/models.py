@@ -32,6 +32,7 @@ class User(AbstractBaseUser):
     last_login = models.DateTimeField(auto_now=True)
 
     objects = MyUserManager()
+    
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['first_name', 'last_name', 'username']
