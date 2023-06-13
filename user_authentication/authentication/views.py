@@ -21,6 +21,8 @@ def register(request):
             return redirect('login')
 
     return render(request, 'register.html')
+    
+# Login and Signup will be updated with JWT Authentication using RestFramework in Django
 
 def logIn(request):
     if request.method == 'POST':
