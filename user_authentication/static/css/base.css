@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    .logo{
+        margin-left:10px;
+        padding:1px;
+        width: 70px;
+        height: 50px;
+    }
+    .navs{
+        margin-left:750px;
+    }    
+    .name{
+        font-weight: bold;
+        font-size:25px;
+    }
