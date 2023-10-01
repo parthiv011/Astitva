@@ -1,10 +1,11 @@
-{% load static %} 
 {%extends 'base.html' %}
-<html>
-<head>
-    <title>Home</title>
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css\home.css' %}">
+{% endblock styles %}
+<title>{% block title %}Home{% endblock title %}</title>
 <body>
-
+{% block content %}
       <div class="ti">
         <h1 class="h1">Astitva</h1>
         <h2 class="h2">Every development lies in the existence!!</h2>
@@ -89,5 +90,6 @@
         <p>Phone: <a href="tel:+91987">+91 9873232</a></p>
         <p>Address: 123 Main Street, New York, USA </p>
     </div>
+    {% endblock content %}
 </body>
 </html>

@@ -10,6 +10,10 @@
     <link rel="icon" href="{% static 'images/Astitva.png' %}" type="image/png"/>
     {% comment %} CSS Link {% endcomment %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    {% block styles %}{% endblock styles %}
+    <title>
+      {% block title %}{% endblock title %}
+  </title>
 </head>
 <body>
     <!-- Navigation Bar Bootstrap -->
@@ -17,7 +21,7 @@
         
         <div class="container-fluid">
             <a class="navbar-brand name" href="{% url 'home'%}">
-            <img class="logo" src="Astitva.png" href="{% url 'home'%}"></a>
+            <img class="logo" src="static\images\Astitva.png" href="{% url 'home'%}"></a>
           <a class="navbar-brand name" href="{% url 'home'%}">Astitva</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,5 +49,6 @@
           </div>
         </div>
       </nav>
+      {% block content %}{% endblock content %}
 </body>
 </html>
